@@ -24,36 +24,35 @@ const { title, description = "Harmonia Joanna Kaczmarek - Terapia dźwiękiem, c
     <meta property="og:locale" content="pl_PL" />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Lato:wght@300;400;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     
     <title>{title}</title>
   </head>
   <body class="min-h-screen flex flex-col bg-cream text-dark">
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between">
+    <header class="absolute top-0 left-0 right-0 z-50">
+      <nav class="container mx-auto px-4 h-16 md:h-20 flex items-center">
+        <div class="flex items-center justify-between w-full">
           <!-- Logo -->
-          <a href="/" class="flex items-center gap-2">
-            <span class="font-serif text-2xl md:text-3xl font-semibold text-primary">Harmonia</span>
-            <span class="hidden sm:inline text-sm text-muted font-light">Joanna Kaczmarek</span>
+          <a href="/" class="flex items-center h-full">
+            <img src="/images/logo.png" alt="Harmonia - umysł · ciało · dusza" class="h-14 md:h-16 w-auto" />
           </a>
           
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center gap-8">
-            <a href="/" class="nav-link">Strona główna</a>
-            <a href="/o-mnie" class="nav-link">O mnie</a>
-            <a href="/oferta" class="nav-link">Oferta</a>
-            <a href="/swiece-sojowe" class="nav-link">Świece sojowe</a>
+            <a href="/" class="text-white/90 hover:text-white font-medium text-sm transition-colors">Strona główna</a>
+            <a href="/o-mnie" class="text-white/90 hover:text-white font-medium text-sm transition-colors">O mnie</a>
+            <a href="/oferta" class="text-white/90 hover:text-white font-medium text-sm transition-colors">Oferta</a>
+            <a href="/swiece-sojowe" class="text-white/90 hover:text-white font-medium text-sm transition-colors">Świece sojowe</a>
             <a href="/kontakt" class="btn-primary">Kontakt</a>
           </div>
           
           <!-- Mobile Menu Button -->
-          <button id="mobile-menu-btn" class="md:hidden p-2 text-dark hover:text-primary transition-colors" aria-label="Menu">
+          <button id="mobile-menu-btn" class="md:hidden p-2 text-white hover:text-primary transition-colors" aria-label="Menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
@@ -61,12 +60,12 @@ const { title, description = "Harmonia Joanna Kaczmarek - Terapia dźwiękiem, c
         </div>
         
         <!-- Mobile Navigation -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-sand">
-          <div class="flex flex-col gap-4 pt-4">
-            <a href="/" class="nav-link">Strona główna</a>
-            <a href="/o-mnie" class="nav-link">O mnie</a>
-            <a href="/oferta" class="nav-link">Oferta</a>
-            <a href="/swiece-sojowe" class="nav-link">Świece sojowe</a>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 bg-dark/95 backdrop-blur-sm rounded-lg">
+          <div class="flex flex-col gap-4 p-4">
+            <a href="/" class="text-white/90 hover:text-white font-medium">Strona główna</a>
+            <a href="/o-mnie" class="text-white/90 hover:text-white font-medium">O mnie</a>
+            <a href="/oferta" class="text-white/90 hover:text-white font-medium">Oferta</a>
+            <a href="/swiece-sojowe" class="text-white/90 hover:text-white font-medium">Świece sojowe</a>
             <a href="/kontakt" class="btn-primary text-center">Kontakt</a>
           </div>
         </div>
@@ -82,7 +81,7 @@ const { title, description = "Harmonia Joanna Kaczmarek - Terapia dźwiękiem, c
         <div class="grid md:grid-cols-3 gap-8">
           <!-- Logo & Description -->
           <div>
-            <span class="font-serif text-2xl font-semibold text-primary-light">Harmonia</span>
+            <img src="/images/logo.png" alt="Harmonia" class="h-10 w-auto brightness-0 invert opacity-80" />
             <p class="mt-4 text-gray-300 text-sm leading-relaxed">
               Towarzyszę osobom przemęczonym i przytłoczonym stresem w podróży powrotnej do samych siebie.
             </p>

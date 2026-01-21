@@ -5,38 +5,43 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Harmonia Joanna Kaczmarek | Terapia dźwiękiem i coaching">
   
   <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-[100vh] overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <img 
         src="/images/hero-bg.jpg" 
         alt="Misy terapeutyczne" 
         class="w-full h-full object-cover"
+        style="object-position: center 30%;"
         loading="eager"
       />
-      <div class="hero-gradient absolute inset-0"></div>
     </div>
     
-    <!-- Content -->
-    <div class="relative z-10 container mx-auto px-4 text-center text-white">
-      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold mb-6 leading-tight animate-fadeInUp">
-        A co, jeśli w całym tym szumie<br class="hidden md:block" />
-        mogłabyś wreszcie usłyszeć swoją<br class="hidden md:block" />
-        <span class="text-cream">wewnętrzną melodię spokoju?</span>
-      </h1>
-      
-      <blockquote class="text-lg md:text-xl text-cream/90 max-w-2xl mx-auto mb-8 border-l-0 italic animate-fadeInUp delay-100">
-        „Kiedy stworzymy pokój, harmonię i równowagę w naszych umysłach, znajdziemy to w naszym życiu"
-        <cite class="block text-sm mt-2 not-italic">– Louise Hay</cite>
-      </blockquote>
-      
-      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp delay-200">
-        <a href="/oferta" class="btn-primary bg-white text-primary hover:bg-cream">
-          Poznaj moją ofertę
-        </a>
-        <a href="/kontakt" class="btn-secondary border-white text-white hover:bg-white hover:text-primary">
-          Umów bezpłatną konsultację
-        </a>
+    <!-- Content - centered vertically in the dark area above the gong -->
+    <div class="relative z-10 min-h-[60vh] flex items-center justify-center">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto text-center">
+          <h1 class="text-base sm:text-lg md:text-xl lg:text-2xl font-light mb-4 leading-snug tracking-wide text-white" style="font-family: 'Lato', 'Montserrat', sans-serif; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
+            A co, jeśli w całym tym szumie mogłabyś wreszcie usłyszeć swoją<br class="hidden lg:block" />
+            wewnętrzną melodię spokoju?
+          </h1>
+          
+          <div class="max-w-3xl mx-auto mb-6 text-center">
+            <p class="text-sm sm:text-base md:text-lg italic leading-relaxed" style="font-family: 'Lato', 'Montserrat', sans-serif; color: #d4a574; text-shadow: 0 1px 2px rgba(0,0,0,0.2);">
+              "Kiedy stworzymy pokój, harmonię i równowagę w naszych umysłach, znajdziemy<br class="hidden md:block" />
+              to w naszym życiu" – Louise Hay
+            </p>
+          </div>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/oferta" class="btn-primary">
+              Poznaj moją ofertę
+            </a>
+            <a href="/kontakt" class="btn-secondary border-primary text-primary hover:bg-primary hover:text-white">
+              Umów bezpłatną konsultację
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     
