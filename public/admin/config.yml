@@ -1,0 +1,97 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Lokalne testy (odkomentuj do testowania lokalnie)
+# local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+locale: 'pl'
+
+collections:
+  # Strony główne
+  - name: "pages"
+    label: "Strony"
+    files:
+      - name: "home"
+        label: "Strona główna"
+        file: "src/content/pages/home.json"
+        fields:
+          - { label: "Tytuł hero", name: "heroTitle", widget: "string" }
+          - { label: "Cytat", name: "heroQuote", widget: "text" }
+          - { label: "Autor cytatu", name: "heroQuoteAuthor", widget: "string" }
+          - { label: "Tekst wprowadzenia", name: "introText", widget: "text" }
+          - { label: "Tekst podkreślony", name: "introHighlight", widget: "text" }
+          
+      - name: "about"
+        label: "O mnie"
+        file: "src/content/pages/about.json"
+        fields:
+          - { label: "Tytuł", name: "title", widget: "string" }
+          - { label: "Zdjęcie", name: "image", widget: "image" }
+          - { label: "Treść", name: "content", widget: "markdown" }
+          - label: "Kwalifikacje"
+            name: "qualifications"
+            widget: "list"
+            fields:
+              - { label: "Tytuł", name: "title", widget: "string" }
+              - { label: "Opis", name: "description", widget: "text" }
+
+      - name: "contact"
+        label: "Kontakt"
+        file: "src/content/pages/contact.json"
+        fields:
+          - { label: "Tytuł", name: "title", widget: "string" }
+          - { label: "Opis", name: "description", widget: "text" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Telefon", name: "phone", widget: "string" }
+          - { label: "Adres", name: "address", widget: "text" }
+
+  # Usługi/Oferta
+  - name: "services"
+    label: "Oferta"
+    folder: "src/content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Krótki opis", name: "excerpt", widget: "text" }
+      - { label: "Zdjęcie", name: "image", widget: "image" }
+      - { label: "Kolejność", name: "order", widget: "number", default: 0 }
+      - { label: "Treść", name: "body", widget: "markdown" }
+      - label: "Korzyści"
+        name: "benefits"
+        widget: "list"
+        fields:
+          - { label: "Tytuł", name: "title", widget: "string" }
+          - { label: "Opis", name: "description", widget: "text" }
+
+  # Aktualności/Blog (opcjonalnie)
+  - name: "blog"
+    label: "Aktualności"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { label: "Tytuł", name: "title", widget: "string" }
+      - { label: "Data publikacji", name: "date", widget: "datetime" }
+      - { label: "Zdjęcie", name: "image", widget: "image", required: false }
+      - { label: "Krótki opis", name: "excerpt", widget: "text" }
+      - { label: "Treść", name: "body", widget: "markdown" }
+
+  # Ustawienia strony
+  - name: "settings"
+    label: "Ustawienia"
+    files:
+      - name: "general"
+        label: "Ogólne"
+        file: "src/content/settings/general.json"
+        fields:
+          - { label: "Nazwa strony", name: "siteName", widget: "string" }
+          - { label: "Opis SEO", name: "siteDescription", widget: "text" }
+          - { label: "Email kontaktowy", name: "contactEmail", widget: "string" }
+          - { label: "Telefon", name: "contactPhone", widget: "string" }
+          - { label: "Facebook URL", name: "facebookUrl", widget: "string", required: false }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string", required: false }
