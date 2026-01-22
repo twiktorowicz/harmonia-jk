@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: twiktorowicz/harmonia-jk
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
 
 # Lokalne testy (odkomentuj do testowania lokalnie)
 # local_backend: true
