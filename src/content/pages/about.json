@@ -1,0 +1,19 @@
+{
+  "title": "O mnie",
+  "image": "/images/joanna.jpg",
+  "content": "Jestem certyfikowaną terapeutką dźwiękiem i coachem. Od lat pomagam osobom przemęczonym i przytłoczonym stresem odnaleźć wewnętrzny spokój i równowagę.\n\nMoja droga do pracy z dźwiękiem zaczęła się od własnych poszukiwań harmonii w codziennym życiu. Dziś łączę wiedzę z zakresu terapii dźwiękiem, coachingu i technik relaksacyjnych, oferując kompleksowe wsparcie w powrocie do naturalnego stanu równowagi.",
+  "qualifications": [
+    {
+      "title": "Certyfikowany Terapeuta Dźwiękiem",
+      "description": "Ukończone szkolenia z zakresu terapii misami tybetańskimi i kamertonami."
+    },
+    {
+      "title": "Coach",
+      "description": "Certyfikowany coach wspierający w rozwoju osobistym i zawodowym."
+    },
+    {
+      "title": "Instruktor relaksacji",
+      "description": "Prowadzę warsztaty i sesje relaksacyjne z wykorzystaniem różnych technik."
+    }
+  ]
+}
